@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+
+\title{Informe sobre el Algoritmo QUickSort en Python}
+\author{Axel Jiménez}
+\date{May 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+El siguiente informe describe un código en Python que implemente el \textbf{Algoritmo QuickSort}, desarrollado por \textbf{Tony Hoare} en 1959 y adaptado aquí al lenguaje Python, ayuda a ordenar listas de números de menor a mayor, ahorrando el tiempo de tener que hacerlo uno mismo.
+
+\section{Codigo y explicación}
+\begin{verbatim}
+    def quicksort(arr):
+        if len(arr) <= 1:
+          return arr
+        pivot = arr[len(arr) // 2]
+        left = [x for x in arr if x < pivot]
+        middle = [x for x in arr if x == pivot]
+        right = [x for x in arr if x > pivot]
+        return quicksort(left) + middle + quicksort(right)
+\end{verbatim}
+\section{Propósito}
+QuickSort es ampliamente utilizado por:
+\begin{itemize}
+    \item Su eficiencia ($0(n \log n)$ en promedio).
+    \item Oredena una lista de numeros de menor a mayor, ahorrando tiempo de esa manera
+    \item Implementaciones en librerías estándar (e.g., Python, Java).
+    \item Base de datos y sistemas de alto rendimiento.
+\end{itemize}
+
+\section{Referencias}
+\begin{itemize}
+    \item Hoare, C. A. R. (1961). \textit{Algorithm 64: Quicksort}. Communications of the ACM.
+    \item Python Software Foundation. (1991). \textit{Lenguaje Python}. https://www.python.org/
+\end{itemize}
+\end{document}
